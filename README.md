@@ -6,7 +6,7 @@ You can utilize the backend, or go the the frontend: yada-frontend.herokuapp.com
 
 ### Backend usage
 
-- Pass an url of the video and the format and download the file
+Pass an url of the video and the format and download the file
 
 ```
 https://yada-api.herokuapp.com/download/?url=XXX&format=[video, audio]
