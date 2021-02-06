@@ -2,7 +2,10 @@
 
 ## Usage
 
-You can utilize the backend, or go the the frontend: yada-frontend.herokuapp.com/
+You can utilize the backend, or go the the frontend: 
+```
+https://yada-frontend.herokuapp.com/
+```
 
 ### Backend usage
 
