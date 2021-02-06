@@ -9,9 +9,9 @@ https://yada-frontend.herokuapp.com/
 ### Backend usage
 
 Pass an url of the video and the format and download the file
-
+```
 https://yada-api.herokuapp.com/download/?url=XXX&format=[video, audio]
-
+```
 
 ### Example
 
