@@ -17,25 +17,27 @@ app.add_middleware(
 )
 
 
-
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
 
 @app.get("/download/")
 def main(url: str, format: str):
 
     print(f"DOWNLOADING {url} in format {format}")
 
-    YouTube(url).streams.get_highest_resolution().download()
-
     yt = YouTube(url)
-    yt.streams.first().download()
+
+    if format == 'video':
+        yt.streams.get_highest_resolution().download()
+        media_type = "video/mp4"
+
+    elif format == 'audio':
+        yt.streams.get_audio_only().download()
+        media_type = "audio/mpeg"
 
     download_path = yt.streams.first().default_filename
-    print(download_path)
-
 
     file_like = open(download_path, mode="rb")
-    return StreamingResponse(file_like, media_type="video/mp4")
-
+    return StreamingResponse(file_like, media_type=media_type)
