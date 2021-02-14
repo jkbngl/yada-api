@@ -17,3 +17,9 @@ https://yada-api.herokuapp.com/download/?url=XXX&format=[video, audio]
 
 https://yada-api.herokuapp.com/download/?url=https://www.youtube.com/watch?v=21ZEIbjY9VI&format=video
 
+
+### For local development
+
+``` bash
+uvicorn --host 0.0.0.0 main:app --reload
+```
