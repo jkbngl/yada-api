@@ -17,3 +17,4 @@ pytube>=10.4.1
 fastapi>=0.63.0
 instalooter>=2.4.4
 uvloop>=0.15.0
+httptools>=0.1.1
